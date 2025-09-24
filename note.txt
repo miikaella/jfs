@@ -1,0 +1,20 @@
+VSCode제거(기존에 프로그램이 설치되어 있으면 제거필!-기존사용자와 환경충돌 가능성 있음)
+VSCode기본설치
+확장프로그램 설치
+-한국어팩 (kor/선택)
+-Live Server(필수)
+-테마중 one dark pro(코드 색상이 보기좋게 나옴/선택)
+-power mode(/선택-타자입력시 효과)
+-vscode-PDF(/선택-pdf파일 볼수있음)
+-vscode icon(/추천-가독성이 높아짐 - 기본값은 seti -> vscode icon선택)
+단축키변경 - 설정->바로가기키 선택
+클라이언트(client) 컴퓨터 -> 내컴퓨터(로컬디스크C:>이름폴더)
+서버(server) 컴퓨터 -> github(깃허브) -> jfs라는폴더를 생성함 -> readme.md파일이 자동생성됨
+git(github를컨트롤하는것:자료up & down)과 github(실제 저장공간(repository))는 서로 다름
+github- 파일을 담을수 있는 저장공간을 확보함
+github=https://github.com/
+standalone->설치후사용
+portable->설치안함
+
+repository가 바뀌면(추가되면) init부터 다시
+
