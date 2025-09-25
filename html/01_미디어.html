@@ -7,19 +7,96 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="margin:0;">
+    <!-- HTML (Hyper Text Markup Language) -->
+    <!-- CSS(Cascading Style Sheet) -->
     <!-- !탭: emmet(에밋) -->
     <!-- https://docs.emmet.io/cheat-sheet/ -->
     <!-- emmet은 HTML요소 중에 block요소와 inline요소 그 속성대로 출력된다 -->
     <!-- ellement >> tag >> 요소  -->
     <!-- h1+p+a+img 탭 -->
-    <!-- shift+alt+f :정돈(들여쓰기) -->
+    <!-- shift+alt+f : 정돈(들여쓰기) -->
     <!-- F12 : 웹브라우저 결과확인(라이브 서버) -->
     <!-- shift+alt+아래위방향키 : 복제 -->
-    <h1>제목</h1>
+    <!-- ctrl+/ : 주석 -->
+    <!-- ctrl+shift+a : 코드옆에 주석 -->
+    <!-- ctrl+spacebar : 에밋을 다시부를때 -->
+    <!-- 설정에서 wordwrap 검색 off를 on으로 -->
+    <!-- 
+        웹표준:웹접근성에 준해야함,html,js,css를 적절히 분리
+        웹접근성:모든 사람이 동등하게 웹을 사용할수 있도록!(장애인,어르신) 
+        유효성검사:html을 표준에 맞게 작업했는지 확인(https://validator.w3.org/)
+    -->
+    <!-- 적응형 vs 반응형
+        적응형: 도메인이 각각있음 모바일(m.naver.com) 따로 웹따로(naver.com)
+        반응형: 도메인하나로 모바일과 웹을 동시에 제작
+    -->
+    <!-- 자바스크립트는 형식이 많음 어려움
+        html은 형식이 적어 배우기 쉬움 
+    -->
+    <!-- form의 속성값은 선택가능 생략가능 
+        style은 글로벌 속성(모든 태그에 사용) 
+        video width속성, controls 선택가능 생략가능
+        img width속성 선택가능 생략가능
+    -->
+    <!-- video의 파일 형식:mp4, webm등(ogg==ogv는 화질이 떨어짐) -->
+    <!-- 온라인 미디어파일 확장자 변환 프로그램 : https://convertio.co/kr/video-converter/ -->
+    <!-- html요소는 부모/자식관계 -->
+    <!-- html은 요소>태그>속성의 관계임 -->
+    <h1 style="background: yellow;">제목</h1>
+    <h1>제목</h1><!-- ctrl+shift+a : 코드옆에 주석 -->
+    <p style="border: 5px solid red;">본문 텍스트 입니다.</p>
     <p>본문 텍스트 입니다.</p>
+    <a style="text-decoration: none; color: blue; font-size:32px;" href="https://github.com/miikaella/jfs">마이 깃허브
+        사이트</a>
     <a href="https://github.com/miikaella/jfs">마이 깃허브 사이트</a>
-    <img src="figma.png" alt="대체텍스트">    
+    <img src="figma.png" alt="대체텍스트">
+    <img src="figma.png" alt="대체텍스트" style="border: 1px solid gray; transform: rotate(45deg);">
+    <!-- 순서없는목록 -->
+    <ul style="list-style: none;">
+        <li>아메리카노</li>
+        <li>카페라떼</li>
+        <li style="font-style: italic;">카페모카</li>
+        <li style="font-weight: 700;">카푸치노</li>
+        <li>펩시제로슈거</li>
+    </ul>
+    <!-- 순서있는목록 -->
+    <h2 style="border-bottom:3px solid red;">올림픽 양궁 순위</h2>
+    <ol style="line-height: 2;">
+        <li>한국</li>
+        <li>미국</li>
+        <li>???</li>
+    </ol>
+    <img src="https://kyf.or.kr/utl/web/imageSrc.do?path=20220725&physical=FE0766CA00A847BE9719D8EF205586EC&contentType"
+        alt="인스타그램 sns 아이콘" width="100">
+    <img src="https://kyf.or.kr/utl/web/imageSrc.do?path=20220725&physical=FE0766CA00A847BE9719D8EF205586EC&contentType"
+        alt="인스타그램 sns 아이콘" style="width: 100px;">
+    <iframe src="https://www.youtube.com/embed/-4vv5mT5Tkw"
+        title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
+    <iframe src="https://www.youtube.com/embed/-4vv5mT5Tkw"
+        title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
+
+    <video width="320" height="240" controls="true">
+        <source src="mov_bbb.mp4" type="video/mp4">
+        <source src="movie.webm" type="video/webm">
+        <!-- <source src="movie.ogg" type="video/ogg">
+        <source src="movie.webm" type="video/webm"> -->
+        Your browser does not support the video tag.
+    </video>
+    <!-- 종료태그가 없는 요소를 빈요소라고 한다. : img, hr, br -->
+    <hr style="border: 10px solid red;">
+    <!-- 단위:px(픽셀),%,vh,vw -->
+    <!-- video자동플레이: video의 autoplay muted는 세트임(구글에서 막았음 심장마비이슈) -->
+    <!-- video무한반복: loop -->
+    <!-- 파일네임 _표기법:스네이크표기법
+         파일네임 -표기법:케밥케이스표기법
+    -->
+    <video src="main_video1.mp4" width="100%" height="100vh" autoplay muted loop style="width:100%;height: 100vh; object-fit: cover;"></video>
+
 </body>
 
 </html>
