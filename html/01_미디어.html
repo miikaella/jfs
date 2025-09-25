@@ -43,15 +43,22 @@
     <!-- 온라인 미디어파일 확장자 변환 프로그램 : https://convertio.co/kr/video-converter/ -->
     <!-- html요소는 부모/자식관계 -->
     <!-- html은 요소>태그>속성의 관계임 -->
+    <!-- 브라우저별 요소(element) 검증하는 사이트 : https://caniuse.com/ 
+         (그밖에 웹에서 사용하는 모든것 검증가능)
+    -->
+    <!-- 파일네임 _표기법:스네이크표기법
+         파일네임 -표기법:케밥케이스표기법
+    -->
+    <!-- 종료태그가 없는 요소를 빈요소라고 한다. : img, hr, br -->
+    <!-- 단위:px(픽셀),%,vh,vw -->
+    <!-- VSCode의 확장기능 -> Auto Rename Tag -->
     <h1 style="background: yellow;">제목</h1>
     <h1>제목</h1><!-- ctrl+shift+a : 코드옆에 주석 -->
     <p style="border: 5px solid red;">본문 텍스트 입니다.</p>
     <p>본문 텍스트 입니다.</p>
     <a style="text-decoration: none; color: blue; font-size:32px;" href="https://github.com/miikaella/jfs">마이 깃허브
         사이트</a>
-    <a href="https://github.com/miikaella/jfs">마이 깃허브 사이트</a>
-    <img src="figma.png" alt="대체텍스트">
-    <img src="figma.png" alt="대체텍스트" style="border: 1px solid gray; transform: rotate(45deg);">
+    <a href="https://github.com/miikaella/jfs">마이 깃허브 사이트</a>    
     <!-- 순서없는목록 -->
     <ul style="list-style: none;">
         <li>아메리카노</li>
@@ -67,35 +74,57 @@
         <li>미국</li>
         <li>???</li>
     </ol>
+
+    <!-- 멀티미디어 요소 -->
+    <!-- ./:현재폴더 가리킬때 사용 코딩시 사용안해도 되지만 react에서는 꼭 사용해야하는 경우가 있음 -->
+    <!-- 다중선택(ctrl+d) : 선택한 동일단어를 한번에 선택하고 싶은 경우 한페이지에 있는 갯수만큼 선택 
+         다중커서(alt+클릭) : alt선택후 클릭
+    -->
+    <img src="../assets/imgs/figma.png" alt="피그마 로고">
+    <img src="../assets/imgs/figma.png" alt="대체텍스트" style="border: 1px solid gray; transform: rotate(45deg);">
+
     <img src="https://kyf.or.kr/utl/web/imageSrc.do?path=20220725&physical=FE0766CA00A847BE9719D8EF205586EC&contentType"
         alt="인스타그램 sns 아이콘" width="100">
     <img src="https://kyf.or.kr/utl/web/imageSrc.do?path=20220725&physical=FE0766CA00A847BE9719D8EF205586EC&contentType"
         alt="인스타그램 sns 아이콘" style="width: 100px;">
+    <!-- audio영역 : controls, autoplay muted, loop-->
+    <audio controls>
+        <source src="../assets/aud/test_audio.mp3" type="audio/mpeg">
+        <!-- <source src="horse.mp3" type="audio/mpeg"> -->
+        Your browser does not support the audio element.
+    </audio>
+    <audio autoplay loop>
+        <source src="../assets/aud/horse.ogv" type="audio/ogv">
+        <!-- <source src="horse.mp3" type="audio/mpeg"> -->
+        Your browser does not support the audio element.
+    </audio>
+    <!-- 비디오 영역 -->
+    <!-- video자동플레이: video의 autoplay muted는 세트임(구글에서 막았음 심장마비이슈:미디어사용지수(MEI)에 충족하면 사용가능) -->
+    <!-- video무한반복: loop 
+         controls : 비디오 플레이어
+         autoplay+muted : 자동실행(+음소거)
+         poster : 영상사이즈가 클경우 사용하는 start image(동영상재생하거나 탐색전까지)
+    --> 
     <iframe src="https://www.youtube.com/embed/-4vv5mT5Tkw"
         title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 400px; height: 300px;"></iframe>
     <iframe src="https://www.youtube.com/embed/-4vv5mT5Tkw"
         title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 200px; height: 150px;"></iframe>
-
-    <video width="320" height="240" controls="true">
-        <source src="mov_bbb.mp4" type="video/mp4">
-        <source src="movie.webm" type="video/webm">
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 400px; height: 300px;"></iframe>
+    <video controls poster="../assets/vid/mov_bbb.mp4" style="width:400px;height:400px;">
+        <source src="../assets/vid/movie.mp4" type="video/mp4">
+        <source src="../assets/vid/mov_bbb.webm" type="video/webm">
         <!-- <source src="movie.ogg" type="video/ogg">
         <source src="movie.webm" type="video/webm"> -->
         Your browser does not support the video tag.
-    </video>
-    <!-- 종료태그가 없는 요소를 빈요소라고 한다. : img, hr, br -->
-    <hr style="border: 10px solid red;">
-    <!-- 단위:px(픽셀),%,vh,vw -->
-    <!-- video자동플레이: video의 autoplay muted는 세트임(구글에서 막았음 심장마비이슈) -->
-    <!-- video무한반복: loop -->
-    <!-- 파일네임 _표기법:스네이크표기법
-         파일네임 -표기법:케밥케이스표기법
-    -->
-    <video src="main_video1.mp4" width="100%" height="100vh" autoplay muted loop style="width:100%;height: 100vh; object-fit: cover;"></video>
+    </video>    
+    <hr style="border: 10px solid red;">    
+    <video src="../assets/vid/main_video1.mp4" width="100%" height="100vh" autoplay muted loop
+    style="width:100%;height: 100vh; object-fit: cover;"></video>
+    
+    
 
 </body>
 
