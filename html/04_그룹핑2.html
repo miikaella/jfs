@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>그룹핑</title>
+</head>
+
+<body>
+    <h1>그룹핑1</h1>
+    <!-- alt+클릭:선택하고 싶은것만 선택 / ctrl+alt+방향키:같은줄에 있는것 선택가능 -->
+    <!-- 동적인 full페이지의 경우 div로 사용 -->
+    <div style="border:1px solid red; margin:5px; height:100px">헤더</div>
+    <div style="border:1px solid red; margin:5px; height:300px;">섹션</div>
+    <div style="border:1px solid red; margin:5px; height:100px">푸터</div>
+
+    <h1>그룹핑2</h1>
+    <!--
+        HTML4.01버전에서는 div사용 했었음.
+        HTML5버전에서 시멘틱(의미있는) 태그가 나옴. 요소의 성격은 div와 같음
+        다만 section에는 h2~6까지중 하나는 사용해야함
+        header : 머리글, 로고, 내비게이션, 언어, sns, 로그인, 회원가입(내에 footer,address,header태그는 사용불가)
+        section : 일반적으로 그룹핑에 사용 반드시 하나이상의 제목태그를 가지고 있어야함
+        footer : 바닥글 - 저작권, 주소, 사이트맵, 하단메뉴, 하단로고, 위로가기버튼       
+        nav : 내비게이션(Gnb)
+        main : 메인 콘텐츠, 한페이지에 한번만 사용가능
+        aside : 선택사용
+        article : 독립된 콘텐츠에 사용(신문의 사설같은..) 반드시 하나이상의 제목태그를 가지고 있어야함
+        address : 제작자 또는 소유자 연락처 정보, 주소
+        meta data : 그데이타가 가지고 있는 속성값(파일을 설명하는 태그)
+        자바스크립트에선 사람=객체라면 아시아인 미국인=속성임
+        16진수 > 2진법 > 모니터출력
+    -->
+    <header style="border:1px solid red; margin:5px; height:100px">헤더</header>
+    <nav>내비게이션</nav>
+    <div style="border:1px solid red; margin:5px; height: 300px;display: flex;flex-wrap: wrap;">
+        <div style="width: 60%;">
+            <section style="background:yellow; height:150px;"><h2>섹션</h2></section>
+            <article style="background:aqua; height:150px;"><h2>아티클</h2></article>
+        </div>
+        <aside style="background:blue; width:40%; height: 300px;">사이드</aside>
+    </div>
+    <footer style="border:1px solid red; margin:5px; height:100px">푸터</footer>  
+
+
+</body>
+
+</html>

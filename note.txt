@@ -25,6 +25,8 @@ VSCode확장프로그램 설치
 settings.json에서
 editor.tokenColor...
 "comments" : 색상(#333333) ==> 주석색깔 변경하기
+- 확장프로그램 -> Beautify (정렬프로그램) 설치후 바로가기키를 beau검색후 shift+alt+f로 변경
+- 에밋 약어로 래핑 바로가기키 등록 alt+w
 
 ////Git과Github에 대하여
 서버(server) 컴퓨터 -> github(깃허브) -> jfs라는폴더를 생성함 -> readme.md파일이 자동생성됨
@@ -48,3 +50,9 @@ repository가 바뀌면(추가되면) init부터 다시
 혹시 서버에 변경사항을 가져오려면
 -git pull origin main
 
+////크롬
+확장프로그램 
+-cssviewer
+-구글,네이버 번역기
+-html의 <html lang="ko"> 언어선택시 w3school에서 https://www.w3schools.com/tags/att_global_lang.asp 참고
+-w3shcool에서 다양한 정보 참고/MDN함께 사용, 코드펜은 실시간 html코딩 https://codepen.io/

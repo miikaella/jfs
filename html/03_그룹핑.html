@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><!-- 부모이상은 조상 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title : 웹브라우저의 이름(페이지명) -->
+    <title>프로젝트명</title>
+</head>
+
+<body style="margin:0;"><!-- 부모이상은 조상 -->
+    <h1>그룹핑</h1>
+    <p>div는 블록레벨 그룹핑에 사용</p>
+    <!-- 부모/자식 요소, 형제(sibllings)관계, 상속 -->
+    <!-- css display속성값이 block,inline,inline-block이 있음 -->
+    <!-- tab:들여쓰기, shift+tab:내어쓰기 -->    
+    <div><!-- body의 자식 -->   
+        <div style="border:1px solid red;width:50%;">블록레벨 요소의 대표테그</div><!-- body의 손자 -->
+        <div>h1~h6, p, ul, ol, li, hr</div>
+        <div>세로로 배치됨</div>
+        <div>크기지정가능(기본값은 100%,auto, height0)</div>
+        <div>여백지정가능(margin, padding) 테두리지정가능(border)</div>
+    </div>
+    <hr>
+    <span style="border:1px solid red;">인라인 요소의 대표테그</span>
+    <span>img, video, audio, a, iframe</span>
+    <span>가로로 배치됨</span>
+    <span>크기지정 불가 하지만 img, video, iframe은 예외</span>
+    <span>padding, margin상하 지정가능</span>
+</body>
+
+</html>

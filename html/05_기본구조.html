@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko"><!-- 언어표시 영어권:en, 중국:zh, 일본:ja -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>HTML 기본구조</title>
+    <link rel="stylesheet" href="스타일.css"><!-- 외부스타일 -->
+    <style>/* 내부스타일 */
+        body{background:rgb(0, 217, 255);}
+    </style>
+    <script>"자바스크립트를 직접기술할때"</script><!-- 내부스크립트 -->
+</head>
+
+<!-- 본문 시작 -->
+<body><!-- 인라인스타일 -->
+    <h1>제목</h1>
+    <!-- lorem ipsum입숨:빈태그안에 결과물 확인을 위한 의미없는 dummy텍스트 -->
+    <p><span style="color:red;font-weight:700;font-size:30px;">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Esse <b>corrupti</b> non dolor<mark> aspernatur optio excepturi </mark>veritatis laborum <span style="background:yellow;">debitis</span> culpa maxime? Illo quae repellat officia amet, <span style="font-style:italic;">corporis</span> saepe tempore non <i>beatae.</i></p>
+    <p>Lorem ipsum dolor sit amet.</p><!-- lorem5 엔터 : 5단어의 텍스트 출력 -->
+    <!-- 
+        strong:제일중요 강조시 사용        
+        em:중요한 텍스트,이텔릭
+        mark:중요단어 강조시 사용 (웹에서 검색했을때 우선검색대상)        
+    -->
+    <ul>
+        <li>순서없는 목록</li>
+    </ul>    
+    <a href="URL,파일,이메일,전화번호">내용</a>
+    <!-- dummy이미지: lorem픽섬 https://picsum.photos/ -->
+    <img src="https://picsum.photos/id/237/200/300" alt="대체텍스트">
+    <!-- dummy비디오: https://www.pexels.com/ko-kr/videos/ -->
+    <video controls autoplay muted loop style="width:400px">
+        <source src="../assets/vid/13624726_3840_2160_24fps.mp4" type="video/mp4">
+        <source src="../assets/vid/13624726_3840_2160_24fps.webm" type="video/webm">
+        <source src="../assets/vid/13624726_3840_2160_24fps.ogg" type="video/ogg">
+    </video>
+    <!-- dummy오디오: mp3, wav, ogg 무료소리창고 https://pgtd.tistory.com/ -->
+    <audio controls>
+        <source src="../assets/aud/992D814D5FCA84A703.mp3" type="audio/mp3">
+        <source src="../assets/aud/992D814D5FCA84A703.wav" type="audio/wav">
+        <source src="../assets/aud/992D814D5FCA84A703.ogg" type="audio/ogg">
+    </audio>
+    <!-- 외부파일 가져오기(*.mp4, URL) -->
+    <iframe src="https://daum.com" style="border:none;"></iframe><!--  frameborder="0" 이건 쓰면 유효성검사에서 걸림(비표준) -->
+</body>
+<!-- 본문 끝 -->
+</html>
