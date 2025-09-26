@@ -52,13 +52,17 @@
     <!-- 종료태그가 없는 요소를 빈요소라고 한다. : img, hr, br -->
     <!-- 단위:px(픽셀),%,vh,vw -->
     <!-- VSCode의 확장기능 -> Auto Rename Tag -->
+    <!-- ./:현재폴더 가리킬때 사용 코딩시 사용안해도 되지만 react에서는 꼭 사용해야하는 경우가 있음 -->
+    <!-- 다중선택(ctrl+d) : 선택한 동일단어를 한번에 선택하고 싶은 경우 한페이지에 있는 갯수만큼 선택 
+         다중커서(alt+클릭) : alt선택후 클릭
+    -->
     <h1 style="background: yellow;">제목</h1>
     <h1>제목</h1><!-- ctrl+shift+a : 코드옆에 주석 -->
     <p style="border: 5px solid red;">본문 텍스트 입니다.</p>
     <p>본문 텍스트 입니다.</p>
     <a style="text-decoration: none; color: blue; font-size:32px;" href="https://github.com/miikaella/jfs">마이 깃허브
         사이트</a>
-    <a href="https://github.com/miikaella/jfs">마이 깃허브 사이트</a>    
+    <a href="https://github.com/miikaella/jfs">마이 깃허브 사이트</a>
     <!-- 순서없는목록 -->
     <ul style="list-style: none;">
         <li>아메리카노</li>
@@ -76,10 +80,6 @@
     </ol>
 
     <!-- 멀티미디어 요소 -->
-    <!-- ./:현재폴더 가리킬때 사용 코딩시 사용안해도 되지만 react에서는 꼭 사용해야하는 경우가 있음 -->
-    <!-- 다중선택(ctrl+d) : 선택한 동일단어를 한번에 선택하고 싶은 경우 한페이지에 있는 갯수만큼 선택 
-         다중커서(alt+클릭) : alt선택후 클릭
-    -->
     <img src="../assets/imgs/figma.png" alt="피그마 로고">
     <img src="../assets/imgs/figma.png" alt="대체텍스트" style="border: 1px solid gray; transform: rotate(45deg);">
 
@@ -104,7 +104,7 @@
          controls : 비디오 플레이어
          autoplay+muted : 자동실행(+음소거)
          poster : 영상사이즈가 클경우 사용하는 start image(동영상재생하거나 탐색전까지)
-    --> 
+    -->
     <iframe src="https://www.youtube.com/embed/-4vv5mT5Tkw"
         title="Hyundai Genesis Time to HTRAC commercial 현대자동차 제네시스 광고" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -119,12 +119,10 @@
         <!-- <source src="movie.ogg" type="video/ogg">
         <source src="movie.webm" type="video/webm"> -->
         Your browser does not support the video tag.
-    </video>    
-    <hr style="border: 10px solid red;">    
+    </video>
+    <hr style="border: 10px solid red;">
     <video src="../assets/vid/main_video1.mp4" width="100%" height="100vh" autoplay muted loop
-    style="width:100%;height: 100vh; object-fit: cover;"></video>
-    
-    
+        style="width:100%;height: 100vh; object-fit: cover;"></video>
 
 </body>
 
