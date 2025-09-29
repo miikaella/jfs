@@ -51,7 +51,7 @@ repository가 바뀌면(추가되면) init부터 다시
 으로 업로드 완료!
 혹시 서버에 변경사항을 가져오려면
 -git pull origin main
--fork
+
 
 ////크롬
 확장프로그램 
@@ -62,5 +62,7 @@ w3shcool에서 다양한 정보 참고/MDN함께 사용,
 코드펜은 실시간 html코딩 https://codepen.io/
 - body사이 내용만 입력하면됨
 -<pre>에 사용되는 monospace type의 글꼴 M과 N의 사이즈가 같음
-인터넷프로토콜
+-fork기능으로 현재파일 copy
+
+///인터넷프로토콜
 http는21번https는 443번
