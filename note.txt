@@ -27,6 +27,8 @@ editor.tokenColor...
 "comments" : 색상(#333333) ==> 주석색깔 변경하기
 - 확장프로그램 -> Beautify (정렬프로그램) 설치후 바로가기키를 beau검색후 shift+alt+f로 변경
 - 에밋 약어로 래핑 바로가기키 등록 alt+w
+- 기본글꼴은 consonla= 0과o구분 
+- 많이 쓰는건 d2coding
 
 ////Git과Github에 대하여
 서버(server) 컴퓨터 -> github(깃허브) -> jfs라는폴더를 생성함 -> readme.md파일이 자동생성됨
@@ -49,10 +51,16 @@ repository가 바뀌면(추가되면) init부터 다시
 으로 업로드 완료!
 혹시 서버에 변경사항을 가져오려면
 -git pull origin main
+-fork
 
 ////크롬
 확장프로그램 
 -cssviewer
 -구글,네이버 번역기
 -html의 <html lang="ko"> 언어선택시 w3school에서 https://www.w3schools.com/tags/att_global_lang.asp 참고
--w3shcool에서 다양한 정보 참고/MDN함께 사용, 코드펜은 실시간 html코딩 https://codepen.io/
+w3shcool에서 다양한 정보 참고/MDN함께 사용, 
+코드펜은 실시간 html코딩 https://codepen.io/
+- body사이 내용만 입력하면됨
+-<pre>에 사용되는 monospace type의 글꼴 M과 N의 사이즈가 같음
+인터넷프로토콜
+http는21번https는 443번

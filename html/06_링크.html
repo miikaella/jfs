@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크: a</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!-- <a href="URL">텍스트</a> 
+        필수속성:href
+        - URL(Uniform Resource Locator웹주소)
+        :프로토콜//도메인[포트:생략가능]/경로?쿼리문자열#페이지내 특정위치
+        - mail주소
+        :mailto:khs@naver.com
+        - 전화번호
+        :tel:02-000-0000
+        - 파일링크(.html,.pdf,.png...)
+        - 앵커이동(#aa -> id="aa"로 앵커이동)
+        선택속성:target
+        - _self:기본값-하나의 사이트내의 사이트
+        -_blank:새창으로 연결-다른사이트로 연결
+        -_top:최상위창으로(조상) 연결
+        -_parent:상위부모로 연결
+        글로벌속성:title(말풍선:링크에 대한 설명글=tooltip)
+    -->
+    <!-- 링크상태(link):파랑색, 밑줄 -->
+    <!-- 활성화(active):빨강색, 밑줄 -->
+    <!-- 방문후(visited):보라색, 밑줄 -->
+    <a href="https://github.com/miikaella/jfs" title="현재창으로 연결">개인사이트</a><!-- 안쓰면target기본값인 _self -->
+    <a href="https://www.figma.com" target="_blank" title="새창으로 연결"><img src="../assets/imgs/figma.png" alt="피그마 웹사이트로 이동"></a>
+    <!-- 메일주소링크 하기 -->
+    메일 주소<a href="mailto:miikaella@naver.com">miikaella@naver.com</a>
+    <!-- 전화번호링크 하기 -->
+    전화번호<a href="tel:010-3009-4023">010-3009-4023</a>
+
+    
+</body>
+</html>
