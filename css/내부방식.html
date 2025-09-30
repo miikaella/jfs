@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card UI</title>
+    <!-- 내부 스타일:style태그 내부에 기록 -->
+    <!-- style태그는 head태그안에 기록한다. -->
+    <style>
+        /* Import Noto Sans KR for Korean text */
+        /* 구글웹폰트 가져오기 = CDN(Contant Delevery Nertwork)방식 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+        /* css선택자(selector)의 종류
+            :root -> html과 같음(가상 클래스 선택자)
+            :link, :hover, :nth-child 등등 가상 클래스 선택자는 여러개임
+            .like-button::after, ::before -> 가상 요소 선택자(old브라우저는 : 콜론 하나만 인식하므로 :콜론 하나만 사용)
+            * -> 해당 html에서 사용되는 모든 태그(all)(전체 선택자)
+            , -> 그룹선택자(선택자,선택자)
+            body,div, span등등 -> 태그 선택자, 요소 선택자, 타입 선택자
+            .클래스 이름 -> .card-container
+            .클래스 이름 p -> p는 자손 또는 하위선택자
+        */
+        /* css주석 */
+        /* 변수: 값을 담는 그릇(메모리에 저장됨) */
+        /* css에서 변수를 사용하는 형식 : --변수이름(사용자가 마음대로 정함) */
+        /* 변수이름은 개발자가 정한다. */
+
+        :root {
+            --main-bg-color: #f7f7f7;
+            --dark-blue: #2c3e50;
+            --light-grey-text: #888;
+            --phone-number-color: #1a1a1a;
+            --card-bg-color: #fff;
+            --purple-border: #9b59b6;
+            /* Used to simulate the purple line in the original image's crop */
+        }
+
+        /* Basic Reset and Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--main-bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Card Container Styles */
+        .card-container {
+            width: 100%;
+            max-width: 360px;            
+            background-color: var(--card-bg-color);
+            border-radius: 0;            
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border-left: 5px solid var(--purple-border);
+        }
+
+        /* Image Wrapper and Image */
+        .card-image-wrapper {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Content Area */
+        .card-content {
+            padding: 10px 20px 20px;
+            position: relative;
+            
+        }
+
+        /* Header (Badge and Like Button) */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        /* Badge Style */
+        .tag-badge {
+            background-color: var(--dark-blue);
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 5px 12px;
+            border-radius: 4px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+
+        /* Like Button Style */
+        .like-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s;
+            position: absolute;
+            top: -65px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .like-button:hover {
+            background-color: #b3b3b3;
+        }
+
+        /* Add a heart shape using a pseudo-element */
+        .like-button::after {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        /* Title */
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Details (Address and Scale) */
+        .card-details p {
+            color: var(--light-grey-text);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* Contact Number Section */
+        .card-contact {
+            margin-top: 25px;
+        }
+
+        .phone-number {
+            color: var(--phone-number-color);
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        정보구조(IA(Information Architecture)) 설계
+        메인 페이지1: Home -index.html
+        서브 페이지2: about me -about.html
+        서브 페이지3: work(portfolio, project) -work.html
+        서브 페이지4: contact us -contact.html
+    -->
+    <!-- section(본문) area -->
+    <!-- https://www.honorsville.co.kr/ -->
+    <div class="card-container">
+        <div class="card-image-wrapper">
+            <img src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관"
+                class="card-image">
+            <!-- <img src="apartment-complex.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" class="card-image"> -->
+        </div>
+
+        <div class="card-content">
+            <div class="card-header">
+                <span class="tag-badge">분양중</span>
+                <!-- 폼 요소: 회원가입, 로그인, 게시판, 상품구매 및 결재 -->
+                <button class="like-button" aria-label="관심 단지로 추가">
+                </button>
+            </div>
+
+            <h2 class="card-title">충주연수 경남아너스빌 센터원</h2>
+
+            <div class="card-details">
+                <p>충청북도 충주시 연수동 787-25 일원</p>
+                <p>243세대</p>
+            </div>
+
+            <div class="card-contact">
+                <p class="phone-number">1866-0234</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
