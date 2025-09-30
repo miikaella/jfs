@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* 전체 선택자(Universal선택자) */
+        /* * {box-sizing: border-box; margin: 0; padding: 0;} */
+        * {border: 1px solid red;}
+        /* 그룹 선택자: 속성과 속성값이 같을 경우(모든 선택자 사용 가능) */
+        html, body, h1, ul, li {border: 1px solid red;}        
+        /* 태그 선택자 */                
+        li {color: orange;}
+        /* 클래스 선택자 : 중복사용 가능 */
+        .li {color: aqua;}
+        /* 아이디(identity:식별자=변수(고유해야함)) 선택자 */
+        #li {color: darkslateblue;}
+        /* 아이디/클래스 이름 지정 규칙
+            1. 첫글자에 숫자는 사용x : .card1(o), .1card(x)
+            2. 특수문자는 -(하이픈), _(언더바)만 사용가능
+            3. 캐밥-케이스 사용(관례적)
+        */
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자</h1>    
+    <ul>
+        <li>태그 선택자</li>
+        <li id="li" class="li">아이디 선택자</li><!-- 아이디값은 고유해야함 -->
+        <li class="li li2">클래스 선택자</li><!-- 클래스는 중복값 가능 -->
+        <li>그룹 선택자</li>
+        <li>전체 선택자</li>
+    </ul>
+</body>
+</html>

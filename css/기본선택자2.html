@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* 
+        1.하위(descendant자식+손자) 선택자 
+            - 기호는 공백(한 칸 띄어쓰기)
+            - 선택자1 선택자2
+            - 부모요소 하위요소
+            - li는 body의 손자
+            예) body h1(o), h1 body(x), body li(o)
+            예) ul .li(o) :ul자손인 .li  
+            예) ul *(o) :ul의 모든자손          
+            예) ul li
+        2.자식(child) 선택자(태그 규칙상 반드시 자식이어야만 함)
+            - 기호는 >
+            - 선택자1(부모) > 선택자2(자식만 올수 있음)
+            예) body > h1(o), h1 > body(x), body > li(x)
+        3.복합(compound) 선택자
+            - 예) ul.li(o) :ul중에 .li        
+        */
+        ul h2 {border:1px solid red;}
+        li > p {border:2px dashed blue;}
+        /* li태그중에 .li를 가지고 있는 요소 */
+        li.li {border:3px dotted violet;}
+        /* li태그의 하위요소중에 .li를 가지고 있는 요소 */        
+        li p.li {border:3px double palegreen;}
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자2</h1>    
+    <h2>두 개 이상의 선택자를 활용한 선택자</h2>
+    <ul class="li">
+        <li>
+            <h2 class="descendant">하위 선택자</h2>
+            <p class="li">하위 선택자란? 공백을 사용하여 두개의 선택자를 사용한 선택자를 말한다.</p>            
+        </li>
+        <li>자식 선택자</li><!-- 아이디값은 고유해야함 -->
+        <li class="li">결합 선택자</li><!-- 클래스는 중복값 가능 -->
+        <li>가상 클래스 선택자</li>
+        <li>가상 요소 선택자</li>
+    </ul>
+</body>
+</html>

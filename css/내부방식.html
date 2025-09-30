@@ -126,16 +126,20 @@
         }
 
         .like-button:hover {
-            background-color: #b3b3b3;
+            background-color: #e40a0a;
         }
 
         /* Add a heart shape using a pseudo-element */
+        /* <button class="like-button">before내용after</button>
+            ::after는 종료태그 바로 앞에 삽입
+            ::before는 시작태그 바로 뒤에 삽입
+        */
         .like-button::after {
-            content: '';
+            content: '12345';
             display: block;
             width: 18px;
             height: 18px;
-            background-color: white;
+            background-color: blue;
             border-radius: 50%;
         }
 
@@ -191,8 +195,7 @@
             <div class="card-header">
                 <span class="tag-badge">분양중</span>
                 <!-- 폼 요소: 회원가입, 로그인, 게시판, 상품구매 및 결재 -->
-                <button class="like-button" aria-label="관심 단지로 추가">
-                </button>
+                <button class="like-button" aria-label="관심 단지로 추가"></button>
             </div>
 
             <h2 class="card-title">충주연수 경남아너스빌 센터원</h2>

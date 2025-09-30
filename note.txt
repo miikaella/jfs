@@ -26,6 +26,7 @@ settings.json에서
 editor.tokenColor...
 "comments" : 색상(#333333) ==> 주석색깔 변경하기
 - 확장프로그램 -> Beautify (정렬프로그램) 설치후 바로가기키를 beau검색후 shift+alt+f로 변경
+- image preview
 - 에밋 약어로 래핑 바로가기키 등록 alt+w
 - 기본글꼴은 consonla= 0과o구분 
 - 많이 쓰는건 d2coding
@@ -81,3 +82,12 @@ http는21번https는 443번
 }
 -style은-inline>내부>외부
 -style내의 속성은 마지막라인에 적용된 속성
+@charset "utf-8";
+/* 필수:문자열 셋팅 */
+/* 
+css적용 우선순위 
+인라인 > 내부or외부(동등할경우 아래지정된것이 우선적용)
+*/
+선택자=selector
+속성=property
+속성값=value(문자string+숫자number)
