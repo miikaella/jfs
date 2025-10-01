@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: display</title>
+    <style>
+        /* 
+            display:표시방식;
+            block
+            inline
+            inline-block:inline이면서 block성격을 가짐
+            none:없음
+        */
+    </style>
+</head>
+
+<body>
+    <!-- block-level element -->
+    <div>
+        <h1>display</h1>
+        <p>Lorem <span>ipsum</span> dolor sit amet <b>consectetur</b> adipisicing <i>elit</i>. A reprehenderit non dolore,
+            sint accusantium, officiis
+            <br>aperiam deleniti eius quia assumenda, provident maiores! Nulla natus fugiat ab corporis dolore ipsum
+            excepturi?
+        </p>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="http://miikaella.github.io/jfs">개인 사이트</a></li>
+                    <li><a href="mailto:home@naver.com">home@naver.com</a></li>
+                    <li><a href="tel:02-000-2222">02-000-2222</a></li>
+                    <li><a href="index.html">파일</a></li>
+                    <li><a href="#sec">id가 sec인것을 찾아 이동</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="sec">
+            <h2>block vs inline</h2>
+            <figure>
+                <!--
+                    경로 지정 방법
+                    -절대 경로: https://~ (/는 작업영역기준 root디렉부터 시작될경우 절대경로로 볼수 있음)
+                    -상대 경로: ../assets/imgs/figma.png(./는 현재디렉부터시작, /는 root디렉부터시작)
+                -->
+                <!-- 로컬,서버에서 모두 보임(상대경로) -->
+                <img src="../assets/imgs/figma.png" alt="피그마 로고">
+                <!-- 로컬x 서버에서만 보임(작업영역 기준root로 설정) -->
+                <img src="/assets/imgs/figma.png" alt="피그마 로고">
+                <figcaption>이미지 설명글</figcaption>
+            </figure>
+            <video>
+                <source src="../assets/vid/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <audio src="../assets/aud/992D814D5FCA84A703.mp3"></audio>
+        </section>
+        <footer>
+            <address>
+                주소 및 연락처
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

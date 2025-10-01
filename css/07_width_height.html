@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: 박스모델</title>
+    <style>
+        /* outline은 border바깥쪽에 있는 라인 */
+        /* body의 기본 height값은 콘텐츠 크기임 */
+        body {
+            outline: 1px solid black;
+            /* vh : viewport height */
+            /* vw, vmax, vmin */
+            height: 100vh;
+        }
+
+        /* CSS우선순위
+            1.인라인
+            2.id > class or 가상class > 요소(element)
+            3.타입, 슈도 요소
+            - 같은 선택자이면 아래 기록한 것이 적용
+            - 같은 속성일때 아래 기록한 것이 적용
+
+        */
+
+
+        /* width/height의 px은 고정, %는 부모 기준 */
+        div {
+            width: 50%;
+            /* 부모를 기준으로 width가 계산됨 */
+            height: 200px;
+            background-color: powderblue;
+        }
+
+        .box2 {
+            width: 500px;
+            height: 50%;
+        }
+
+        .div1 {
+            width: 100%;
+            /* 최소 너비 */
+            /* min-width:500px -> mw500 (상위너비에 영향받음)*/
+            max-width: 1200px;
+            margin:0 auto;/* 컨텐츠 제외 동일한 여백 */
+            min-width: 500px;
+            /* maw500 : 최대너비 */
+            background-color: rgb(235, 38, 114);
+        }
+
+        .div2 {
+            width: 600px;
+            /* width: 50%; */
+            background-color: rgb(127, 187, 50);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="div1">박스2</div>
+    <div class="div2">박스2</div>
+</body>
+
+</html>

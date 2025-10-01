@@ -1,9 +1,10 @@
 ////VSCODE에 대하여
+- 수정하고 싶은 동일한 단어선택 ctrl+f2 하고 수정단어입력
 VSCode제거(기존에 프로그램이 설치되어 있으면 제거필!-기존사용자와 환경충돌 가능성 있음)
 VSCode기본설치
 VSCode확장프로그램 설치
 -한국어팩 (kor/선택)
--Live Server(필수)
+-Live Server(필수):라이브서버브라우저에서테스트
 -테마중 one dark pro(코드 색상이 보기좋게 나옴/선택)
 -power mode(/선택-타자입력시 효과)
 -vscode-PDF(/선택-pdf파일 볼수있음)
@@ -27,10 +28,14 @@ editor.tokenColor...
 "comments" : 색상(#333333) ==> 주석색깔 변경하기
 - 확장프로그램 -> Beautify (정렬프로그램) 설치후 바로가기키를 beau검색후 shift+alt+f로 변경
 - image preview
-- 에밋 약어로 래핑 바로가기키 등록 alt+w
+- tabout
+-open in brower=>로컬브라우저 테스트
+- 에밋 약어로 래핑 바로가기키 등록 alt+w : 수정하고 싶은 태그 마스킹 후 alt+w 
+- 에밋 사이트 : https://docs.emmet.io/cheat-sheet/
 - 기본글꼴은 consonla= 0과o구분 
 - 많이 쓰는건 d2coding
 -<pre>에 사용되는 monospace type의 글꼴 M과 N의 사이즈가 같음
+           
 
 ////Git과Github에 대하여
 서버(server) 컴퓨터 -> github(깃허브) -> jfs라는폴더를 생성함 -> readme.md파일이 자동생성됨
@@ -68,7 +73,7 @@ w3shcool에서 다양한 정보 참고/MDN함께 사용,
 ///인터넷프로토콜
 http는21번https는 443번
 
-///CSS 
+///CSS/html
 작성방식
 -inline작성방식
 -internal작성방식
@@ -88,6 +93,47 @@ http는21번https는 443번
 css적용 우선순위 
 인라인 > 내부or외부(동등할경우 아래지정된것이 우선적용)
 */
-선택자=selector
-속성=property
-속성값=value(문자string+숫자number)
+div= 선택자=selector
+display= 속성=property
+none= 속성값=value(문자string+숫자number)
+box-sizing:border-box;
+display:flex;->패딩에따라 박스가 늘어나는것을 고정시켜줌
+본래 박스의 전체너비는 width+padding*2+border*2 width=402, height=302
+-width:inherit(부모width를 상속받고싶을때)
+-body에 margin:0;해야 height vh했을때스크롤 안생김
+-auto값=initial
+-max-width의 기본값=none;
+-css내에서의 우선순위
+id > class, 가상class > element(요소)
+line-height:1;/* 텍스트의 기본여백 제거 */
+p {
+            /* line-height:1; ->텍스트의 기본여백 제거 */
+            font-size:16px;
+            /* 1em은 부모가 가지고 있는 글자의 크기의 배수 */
+            /* 1em=16px */
+            margin:1em 0; 
+}
+/* margin이 위아래가 겹칠경우 값이 큰쪽으로 적용된다. 
+        - 두요소 사이에 다른컨텐츠가 없을 경우
+        - 부모와 자식간에도 발생가능 자식의 margin top이 부모 밖으로 생김
+        */   
+display: flow-root;,overflow:hidden; /* display: flex;
+            flex-direction:column; */로 해결
+
+/* 
+            block(div,p)요소 inline(span,em)요소와 겹침현상
+            span의 padding과 div의 margin이 위아래 겹침현상이 발생함 
+            padding top값보다 margin-bottom값을 많이주면된다.
+*/ 
+애니메이션 기본사용방법
+.frame4 {            
+            border-radius: 50% 50%;
+            /* 원(circle):width,height이 동일 할 경우 50% 이상 지정 */  
+            animation: rotate 5s infinite linear;                  
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0);}
+            0% {transform: rotate(360deg);}
+        }
+
+///피그마

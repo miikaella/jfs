@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: 박스모델</title>
+    <style>
+        /* 
+            margin: 여백;
+            margin-top
+            margin-right
+            margin-bottom
+            margin-left
+            
+        */
+        div {
+            /* 개별(individual)속성 */
+            /* 속기(shorthand)속성 : 상우하좌 margin:100px 150px 100px 80px; 
+               상 좌우 하 : margin:100px 150px 80px;
+               상하 좌우 : margin:100px 150px;
+               값은 음수지정 가능
+            */
+            margin-top: 100px;
+            margin-right: 150px;
+            margin-bottom: 100px;
+            margin-left: 150px;
+            background-color: rgb(155, 155, 34);
+            margin: 100px 150px;
+            margin: 100px 150px 80px;
+            margin: 100px;
+            background-color: rgb(155, 155, 34);
+        }
+
+        .div2 {
+            margin-top: 200px;
+        }
+
+        section {
+            background-color: #858282;            
+            /* display: flex;
+            flex-direction:column; -> 방법3 */
+            /* overflow: hidden; -> 방법2 */
+            display: flow-root;/* 가장 현대적인 방법 */
+            /* overflow: hidden; */
+        }
+        /* margin이 위아래가 겹칠경우 값이 큰쪽으로 적용된다. 
+        - 두요소 사이에 다른컨텐츠가 없을 경우
+        - 부모와 자식간에도 발생가능 자식의 margin top이 부모 밖으로 생김
+        */
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>나는 단락이다.</div>
+        <div class="div2">나는 단락이다.</div>
+    </section>
+</body>
+
+</html>
