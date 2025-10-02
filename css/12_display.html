@@ -6,13 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS: display</title>
     <style>
+        
+        /* 
+            왼쪽패널 열고닫기 :ctrl+b
+            아래터미널 열고닫기 :ctrl+j
+            VS code창 분할
+            1.열린파일 오른쪽 상단 창문할 버튼 클릭
+            2.같은파일을 분할할때 ctrl+\
+            3.기본창 분할은 좌우 -> 상하분할 :alt+분할버튼클릭
+            4.ctrl+alt좌우방향키=선택한창 좌우확장
+        */
+        /* 
+            HTML에서 요소를 구분했던 v4.01이전
+            -블록레벨요소
+            -인라인요소
+        */
         /* 
             display:표시방식;
-            block
-            inline
-            inline-block:inline이면서 block성격을 가짐
-            none:없음
+            1.block(줄바꿈됨), width가 100%임,세로배치,크기조절 가능(margin,padding,border지정가능)
+            :주의!!= margin bottom과 top의 겹침현상이 있음
+            :태그종류= html, body, div(header,section,footer,nav,address,figcaption,figure)
+            2.list-item:li(블록레벨임)
+            3.inline(줄바꿈안됨),가로배치, 크기조절 불가(img,video,iframe등 예외도 있음)
+            :위아래margin지정안됨, padding지정가능, border지정가능
+            :부모요소의 크기에 맞춰 줄바꿈된다. 가로배치가 기본임.
+            :태그종류=span,a,img,br,video,iframe
+            4.inline-block(inline이면서 block성격을 가짐, 크기조절 가능)
+            :margin bottom과 top의 겹침현상이 없음.
+            :부모요소의 크기에 맞춰 줄바꿈된다. 가로배치가 기본임.
+            :태그종류= button
+            5.none(없음)
+            태그종류= audio
+        */        
+        body * {            
+            outline: 1px solid lime; 
+            width: 500px;
+        }
+        /* p * =p안에 모든요소 선택 */
+        p *, a, img, video {
+            outline: 3px solid red;
+        }
+        /* 
+            css적용되는 우선순위                        
+            !important> 인라인> 
+            id> class> 타입=html태그
+            같은선택자 끼리는 가장 아래 기록한 것이 적용됨
+            같은id끼리는 id의 갯수가 많은것이 우선
         */
+        #btn {
+            display: flow-root;/* margin top겹침현상 없애는방법 */
+            width: 500px;
+            height: 600px;
+            margin-top: 500px;
+            background-color: lawngreen;
+        }
+        #btn button {
+            display: block;
+            width: 120px;
+            height: 40px;
+            padding: 0;
+            margin:20px;
+            border: 1px solid red;
+            line-height: 1;
+            outline: none;
+        }
     </style>
 </head>
 
@@ -28,7 +85,10 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="http://miikaella.github.io/jfs">개인 사이트</a></li>
+                    <li>
+                        <a href="http://miikaella.github.io/jfs">개인 사이트</a>
+                        <a href="http://miikaella.github.io/jfs">개인 사이트</a>
+                    </li>
                     <li><a href="mailto:home@naver.com">home@naver.com</a></li>
                     <li><a href="tel:02-000-2222">02-000-2222</a></li>
                     <li><a href="index.html">파일</a></li>
@@ -39,13 +99,16 @@
         <section id="sec">
             <h2>block vs inline</h2>
             <figure>
-                <!--
+            <!--                
                     경로 지정 방법
                     -절대 경로: https://~ (/는 작업영역기준 root디렉부터 시작될경우 절대경로로 볼수 있음)
                     -상대 경로: ../assets/imgs/figma.png(./는 현재디렉부터시작, /는 root디렉부터시작)
                 -->
                 <!-- 로컬,서버에서 모두 보임(상대경로) -->
-                <img src="../assets/imgs/figma.png" alt="피그마 로고">
+                <img src="../assets/imgs/figma.png" alt="피그마 로고">                
+                <figcaption>이미지 설명글</figcaption>
+            </figure>
+            <figure>
                 <!-- 로컬x 서버에서만 보임(작업영역 기준root로 설정) -->
                 <img src="/assets/imgs/figma.png" alt="피그마 로고">
                 <figcaption>이미지 설명글</figcaption>
@@ -53,6 +116,7 @@
             <video>
                 <source src="../assets/vid/mov_bbb.mp4" type="video/mp4">
             </video>
+            <iframe src="https://www.daum.net"></iframe><!-- frameborder속성 대신 css의 border속성사용 -->
             <audio src="../assets/aud/992D814D5FCA84A703.mp3"></audio>
         </section>
         <footer>
@@ -60,6 +124,9 @@
                 주소 및 연락처
             </address>
         </footer>
+    </div>    
+    <div id="btn">
+        <button>버튼</button><button>버튼</button><button>버튼</button><button>버튼</button><button>버튼</button>
     </div>
 </body>
 

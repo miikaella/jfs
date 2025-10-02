@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: 가시성visibility and hidden</title>
+    <style>
+        /* 
+            선택자 추가
+            가상 클래스 선택자
+            :hover
+            :nth-of-type(n)
+            :nth-child(n)
+            ~of-type = first-of-type, last-of-type, only-of-type, nth-last-of-type
+            ~-child = first-child, last-child, only-child, nth-last-child
+            n은 정수 -1,0,1,...
+            키워드 :odd(홀수), even(짝수)
+            수열 : 2n, 2n+1, 2n-1, 5n+1...
+        */
+        /* visibility와 opacity는 공간을 차지함 */
+        /* display:none은 완전히 사라짐 */
+        div:nth-of-type(2) {
+            display:none;/* block은 보이기, none숨기기 */
+        }
+        div:nth-of-type(4) {
+            visibility: hidden;/* visible이 기본값(보이기) hidden(숨기기) */
+        }
+        div:nth-of-type(6) {
+            opacity: 0;/* 0:숨기기, 0이상은 보이기 */
+        }
+
+    </style>
+</head>
+<body>
+    <div>가시성1</div>
+    <div>display:none;</div>
+    <div>가시성3</div>
+    <div>visibility:hidden;</div>
+    <div>가시성5</div>
+    <div>opacity:1;(자리차지)</div>
+    <div>가시성7</div>
+</body>
+</html>

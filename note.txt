@@ -21,21 +21,31 @@ VSCode확장프로그램 설치
 - ctrl+/ : 주석 
 - ctrl+shift+a : 코드옆에 주석 
 - ctrl+spacebar : 에밋을 다시부를때 
-- 설정-> 설정-> 상단오른쪽 첫번째 아이콘 
 settings.json에서
 editor.tokenColor...
 "comments" : 색상(#333333) ==> 주석색깔 변경하기
 - 확장프로그램 -> Beautify (정렬프로그램) 설치후 바로가기키를 beau검색후 shift+alt+f로 변경
+- 설정-> 설정-> 상단오른쪽 첫번째 아이콘 
 - image preview
 - tabout
--open in brower=>로컬브라우저 테스트
+- Bracket Pair Color DLW :들여쓰기 색으로표시
+- Highlight Matching Tag
+- indent-rainbow
+
+- open in brower=>로컬브라우저 테스트
 - 에밋 약어로 래핑 바로가기키 등록 alt+w : 수정하고 싶은 태그 마스킹 후 alt+w 
 - 에밋 사이트 : https://docs.emmet.io/cheat-sheet/
 - 기본글꼴은 consonla= 0과o구분 
 - 많이 쓰는건 d2coding
--<pre>에 사용되는 monospace type의 글꼴 M과 N의 사이즈가 같음
+- <pre>에 사용되는 monospace type의 글꼴 M과 N의 사이즈가 같음
 - 수정하고 싶은 동일한 단어선택 ctrl+f2 하고 수정단어입력
-           
+- 왼쪽패널 열고닫기 :ctrl+b
+- 아래터미널 열고닫기 :ctrl+j
+- VS code창 분할
+    1.열린파일 오른쪽 상단 창문할 버튼 클릭
+    2.같은파일을 분할할때 ctrl+\
+    3.기본창 분할은 좌우 -> 상하분할 :alt+분할버튼클릭
+    4.ctrl+alt좌우방향키=선택한창 좌우확장           
 
 ////Git과Github에 대하여
 서버(server) 컴퓨터 -> github(깃허브) -> jfs라는폴더를 생성함 -> readme.md파일이 자동생성됨
@@ -64,6 +74,7 @@ repository가 바뀌면(추가되면) init부터 다시
 확장프로그램 
 -cssviewer
 -구글,네이버 번역기
+- ColorZilla
 -html의 <html lang="ko"> 언어선택시 w3school에서 https://www.w3schools.com/tags/att_global_lang.asp 참고
 w3shcool에서 다양한 정보 참고/MDN함께 사용, 
 코드펜은 실시간 html코딩 https://codepen.io/
@@ -74,6 +85,7 @@ w3shcool에서 다양한 정보 참고/MDN함께 사용,
 http는21번https는 443번
 
 ///CSS/html
+이미지맵
 작성방식
 -inline작성방식
 -internal작성방식
@@ -110,17 +122,16 @@ p {
             /* 1em=16px */
             margin:1em 0; 
 }
-/* margin이 위아래가 겹칠경우 값이 큰쪽으로 적용된다. 
+margin이 위아래가 겹칠경우 값이 큰쪽으로 적용된다. 
         - 두요소 사이에 다른컨텐츠가 없을 경우
         - 부모와 자식간에도 발생가능 자식의 margin top이 부모 밖으로 생김
-        */   
-display: flow-root;,overflow:hidden; /* display: flex;
-            flex-direction:column; */로 해결
-
+        - margin-bottom에도 생김           
+=display: flow-root;(해결방법)
+=overflow:hidden;(해결방법)
 /* 
-            block(div,p)요소 inline(span,em)요소와 겹침현상
-            span의 padding과 div의 margin이 위아래 겹침현상이 발생함 
-            padding top값보다 margin-bottom값을 많이주면된다.
+    block(div,p)요소 inline(span,em)요소와 겹침현상
+    span의 padding과 div의 margin이 위아래 겹침현상이 발생함 
+    padding top값보다 margin-bottom값을 많이주면된다.
 */ 
 애니메이션 기본사용방법
 .frame4 {            
@@ -128,9 +139,53 @@ display: flow-root;,overflow:hidden; /* display: flex;
             /* 원(circle):width,height이 동일 할 경우 50% 이상 지정 */  
             animation: rotate 5s infinite linear;                  
         }
-        @keyframes rotate {
+@keyframes rotate {
             0% {transform: rotate(0);}
             0% {transform: rotate(360deg);}
         }
+//// hover사용법 예
+.card-image-wrapper {
+    overflow: hidden;
+}
+.card-image-wrapper img {
+    transition: 0.3s;
+}
+.card-image-wrapper:hover img {
+    transform: scale(1.2,1.2);/* scale(너비,높이) */
+}/* 마우스를 올리면 이미지가 커진다 */
+
+= iframe의 frameborder=0은 비표준임
+frameborder속성 대신 css의 border속성사용
+/* 
+            css적용되는 우선순위                        
+            !important> 인라인> 
+            id> class> 타입=html태그
+            같은선택자 끼리는 가장 아래 기록한 것이 적용됨
+        */
+- inline요소는 space bar가 margin으로 잡힘
+코딩할때 태그끼리 space bar가 없이 코딩주의!!
+- inline-block은 margin겹침현상 없음
+
+/// 무료 아이콘 fontawesome
+/* fontawsome의 소스코드를 CDN방식으로 사용할것임 */
+/* 
+CDN은 **콘텐츠 전송 네트워크(Content Delivery Network)**의 약자로, 전 세계에 분산된 서버 네트워크를 통해 사용자와 가까운 위치에서 웹 콘텐츠를 빠르게 전달하여 웹사이트의 속도와 안정성을 향상시키는 시스템입니다.
+*/
+/* https://cdnjs.com  = cdn정보를 가지고 있는 사이트 */
+-- fasolid fa~가 cdn범주임 ==> 재배포는 불가
+
+padding : 0 0 0;
+/* 위 왼쪽오른쪽 아래 */
+
+//vertical-align 인라인요소의 세로 정렬을 맞춤 
+top,bottom,middle
+//텍스트 속성중 세로 정렬=line-height:1;
+
+/* p는 위아래 기본마진이 있다. 폰트 크기의 1em(배) */
+
+//구글폰트
+https://fonts.google.com/
 
 ///피그마
+
+
