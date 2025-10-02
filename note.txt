@@ -1,9 +1,8 @@
 ////VSCODE에 대하여
-- 수정하고 싶은 동일한 단어선택 ctrl+f2 하고 수정단어입력
 VSCode제거(기존에 프로그램이 설치되어 있으면 제거필!-기존사용자와 환경충돌 가능성 있음)
 VSCode기본설치
 VSCode확장프로그램 설치
--한국어팩 (kor/선택)
+-kor 한국어팩 (kor/선택)
 -Live Server(필수):라이브서버브라우저에서테스트
 -테마중 one dark pro(코드 색상이 보기좋게 나옴/선택)
 -power mode(/선택-타자입력시 효과)
@@ -35,6 +34,7 @@ editor.tokenColor...
 - 기본글꼴은 consonla= 0과o구분 
 - 많이 쓰는건 d2coding
 -<pre>에 사용되는 monospace type의 글꼴 M과 N의 사이즈가 같음
+- 수정하고 싶은 동일한 단어선택 ctrl+f2 하고 수정단어입력
            
 
 ////Git과Github에 대하여
@@ -87,17 +87,14 @@ http는21번https는 443번
 }
 -style은-inline>내부>외부
 -style내의 속성은 마지막라인에 적용된 속성
-@charset "utf-8";
+-file최상단 -> @charset "utf-8";
+html파일내에서 css적용 우선순위 = 인라인코딩>내부선언or외부파일
 /* 필수:문자열 셋팅 */
 /* 
-css적용 우선순위 
-인라인 > 내부or외부(동등할경우 아래지정된것이 우선적용)
-*/
 div= 선택자=selector
 display= 속성=property
 none= 속성값=value(문자string+숫자number)
-box-sizing:border-box;
-display:flex;->패딩에따라 박스가 늘어나는것을 고정시켜줌
+box-sizing:border-box;->패딩에따라 박스가 늘어나는것을 고정시켜줌
 본래 박스의 전체너비는 width+padding*2+border*2 width=402, height=302
 -width:inherit(부모width를 상속받고싶을때)
 -body에 margin:0;해야 height vh했을때스크롤 안생김
