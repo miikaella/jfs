@@ -32,7 +32,7 @@ body {
     font-family:'NanumSquare', sans-serif;
     font-size:15px;
     line-height: 1.6;
-    font-color:#9a8b86;
+    color:#9a8b86;
 }
 
 /* commoon */
@@ -44,11 +44,16 @@ img {
 }
 /* header */
 /* section */
+#section {
+    display: flex;
+    justify-content: center;
+}
 /* 배경색:background-color */
 /* footer */
 .card-container {
     width:340px;
     background-color: #b3bbb9;
+    margin:20px;
 }
 
 .card-title {

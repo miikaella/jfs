@@ -20,6 +20,7 @@
             짝수번쨰: even또는 2n
             3의배수:3n
             4의배수:4n
+            선택자:empty => 자식 요소가 없을 경우 선택
             선택자:first-of-type => 첫번째 요소
             선택자:last-of-type => 마지막 요소 선택
             p:nth-last-of-type(n) => 마지막 요소부터 거꾸로 거슬러 올라가는 선택자
@@ -68,13 +69,32 @@
         p:nth-child(even) {
             background-color: #cec7c7;
         }
+        p:nth-child(2n+1) {
+            font-size: 40px;
+        }
+        /* div 자식요소가 하나인 요소 */
+        div h2:only-of-type {
+            border-left:10px solid red;
+        }
+        div p:only-child {
+            border-left:10px solid blue;
+        }
+        /* 자식요소가 없는 요소선택 */
+        div:empty {
+            display: block;
+            width:200px;
+            height:100px;
+            border:1px solid red;
+        }
     </style>
 </head>
 <body>
-    <!-- <div>
+    <div>
         <h2>형제관계선택자</h2>
+        <!-- <p>형제관계선택자</p> -->
     </div>
-    <div></div> -->
+    <div></div>
+    <p></p>
     <div>
         <h1>1.형제관계선택자</h1>
         <h2>2.형제선택자</h2>        
@@ -84,6 +104,7 @@
         <p>6.나는 3번째 문단이다.</p>
         <p>7.나는 4번째 문단이다.</p>
         <p>8.나는 5번째 문단이다.</p>
+        <p>9.나는 5번째 문단이다.</p>
     </div>
 </body>
 </html>

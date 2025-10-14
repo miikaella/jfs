@@ -31,6 +31,7 @@ editor.tokenColor...
 - Bracket Pair Color DLW :들여쓰기 색으로표시
 - Highlight Matching Tag
 - indent-rainbow
+- Prettier - Code formatter
 
 - open in brower=>로컬브라우저 테스트
 - 에밋 약어로 래핑 바로가기키 등록 alt+w : 수정하고 싶은 태그 마스킹 후 alt+w 

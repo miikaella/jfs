@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS : flexible</title>
+    <style>
+      /* 
+        부모요소: 컨테이너
+      */
+      .container {
+        display: flex;
+        flex-direction: row;/* row가 기본값 */
+        background-color: DodgerBlue;
+      }
+      /* 
+        자식요소: 플렉스아이템
+        -가로배치
+        -크기=> 콘텐츠크기
+        -inline-block과 같은 성격
+      */
+      .container div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"><!-- 박스를 flex 컨테이너라고 부름 -->
+      <div>Item 1</div><!-- 자식은 flex 아이템이라고 부름(자손은 해당x) -->
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+  </body>
+</html>
