@@ -71,7 +71,7 @@ img {
     display: flow-root;
 }
 .card-details p { 
-    /* p는 위아래 기본마진이 있다. 폰트 크기의 1em(배) */
+/* p는 위아래 기본마진이 있다. 폰트 크기의 1em(배) */
     margin:0;
 }
 
@@ -119,6 +119,6 @@ img {
 .phone-number {
     font-family: "Noto Sans", sans-serif;
     font-size:24px;
-    font-color:#0f2244;
+    color:#0f2244;
     font-weight: 700;/* 700=bold */
 }
