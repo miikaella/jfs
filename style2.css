@@ -47,13 +47,14 @@ img {
 #section {
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 /* 배경색:background-color */
 /* footer */
 .card-container {
     width:340px;
     background-color: #b3bbb9;
-    margin:20px;
+    /* margin:20px; */
 }
 
 .card-title {
